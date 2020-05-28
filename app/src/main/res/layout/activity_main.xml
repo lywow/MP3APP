@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lywow.mp3app.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_top_linlayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/loveblue">
+
+        <TextView
+            android:id="@+id/main_logic_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="10dp"
+            android:text="Alice音乐播放器"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/main_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_top_linlayout"
+        android:layout_above="@+id/music_linlayout">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/music_linlayout"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="@color/DDDDDD">
+
+        <TextView
+            android:id="@+id/playing_music_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="正在播放："
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/music_current_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="00:00"
+                android:gravity="center"
+                android:textColor="#ffffff" />
+
+            <SeekBar
+                android:id="@+id/music_seekbar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:gravity="center"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/music_total_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="10:20"
+                android:textColor="#ffffff"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="12"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/music_prev_imgv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/seach_btn_pre" />
+
+            <ImageView
+                android:id="@+id/music_pause_imgv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/seach_btn_pause" />
+
+            <ImageView
+                android:id="@+id/music_next_imgv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/seach_btn_next" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
